@@ -421,7 +421,7 @@ public class GroupAdapter<VH extends ViewHolder> extends RecyclerView.Adapter<VH
      * To be safe, we fallback to searching through all models for a view type match. This is slow and
      * shouldn't be needed, but is a guard against RecyclerView behavior changing.
      */
-    private Item<VH> getItemForViewType(@LayoutRes int layoutResId) {
+    protected Item<VH> getItemForViewType(@LayoutRes int layoutResId) {
         if (lastItemForViewTypeLookup != null
                 && lastItemForViewTypeLookup.getLayout() == layoutResId) {
             // We expect this to be a hit 100% of the time
